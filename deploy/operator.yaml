@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-namespace-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: argocd-namespace-operator
+  template:
+    metadata:
+      labels:
+        name: argocd-namespace-operator
+    spec:
+      serviceAccountName: argocd-namespace-operator
+      containers:
+        - name: argocd-namespace-operator
+          image: docker-staging.topicusonderwijs.nl/argocd-namespace-operator:latest
+          command:
+          - argocd-namespace-operator
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "argocd-namespace-operator"
