@@ -52,3 +52,9 @@ rules:
   - replicasets
   verbs:
   - get
+- apiGroups:
+  - argoproj.io
+  resources:
+  - applications
+  verbs:
+  - get
