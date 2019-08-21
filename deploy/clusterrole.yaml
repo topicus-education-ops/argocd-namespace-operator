@@ -9,6 +9,7 @@ rules:
   - namespaces
   verbs:
   - list
+  - watch
   - get
   - create
   - update

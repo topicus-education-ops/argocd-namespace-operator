@@ -59,4 +59,5 @@ rules:
   - appprojects
   verbs:
   - list
+  - watch
   - get
