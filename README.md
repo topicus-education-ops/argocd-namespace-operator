@@ -1,3 +1,4 @@
+# ⚠️ OBSOLETE :warning:
 # Argo CD Namespace Operator
 
 The Argo CD namespace operator helps creating the namespace for an [Argo CD `Application` CR](https://github.com/argoproj/argo-cd/blob/master/manifests/crds/application-crd.yaml).
