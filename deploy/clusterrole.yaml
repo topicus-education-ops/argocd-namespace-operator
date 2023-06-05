@@ -20,4 +20,4 @@ rules:
   resources:
   - "*"
   verbs:
-  - updatepsa
+  - "*"
