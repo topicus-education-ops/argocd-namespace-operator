@@ -15,3 +15,9 @@ rules:
   - update
   - patch
   - delete
+- apiGroups:
+  - management.cattle.io
+  resources:
+  - projects
+  verbs:
+  - updatepsa
